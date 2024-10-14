@@ -22,8 +22,7 @@ on:
 # uses es una acción que descarga el código fuente del repositorio 
 # Luego se  configuran el JDK (Java Development Kit) y gradle
 # Se compila el código con gradle y se ejcutan las pruebas (unitarias y de aceptación [Cucumber])
-# Se instala wkhtmltopdf para luego convertir a PDF los reportes de las pruebas
-# El workflow termina con el archivado de los reportes (para poder consultarlos después)
+# El workflow termina con el archivado de los reportes de las pruebas (para poder consultarlos después)
 
 
 jobs:
@@ -57,12 +56,12 @@ jobs:
     - name: Run Unit Tests and Generate Reports
       run: |
         cd MeMo1-Ejercicio1
-        ./gradlew test
+        ./gradlew test --info --tests '*'
 
     - name: Run Cucumber Tests and Generate Reports
       run: |
         cd MeMo1-Ejercicio1
-        ./gradlew cucumberTest --info
+        ./gradlew cucumberTest --info --tests '*'
 
   # Subir los reportes HTML como artefactos
     - name: Archive Test Reports
