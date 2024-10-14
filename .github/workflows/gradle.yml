@@ -62,7 +62,7 @@ jobs:
     - name: Run Cucumber Tests and Generate Reports
       run: |
         cd MeMo1-Ejercicio1
-        ./gradlew cucumberTest
+        ./gradlew cucumberTest --info
 
   # Subir los reportes HTML como artefactos
     - name: Archive Test Reports
