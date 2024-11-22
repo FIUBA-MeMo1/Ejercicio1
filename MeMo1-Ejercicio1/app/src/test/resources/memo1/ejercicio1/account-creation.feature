@@ -1,4 +1,4 @@
-Feature: Account creation
+Feature: Account creation - COOREGIR
   Scenario: Successfully create an account with default balance
     Given I create an account with CBU 123456789
     Then The account balance should be 0.0
